@@ -1,6 +1,6 @@
 import {TaskCard} from "./components/TaskCard";
 import {NewTaskContainer} from "./components/new-task/NewTaskContainer";
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Menu} from "./components/Menu";
 import {Modal} from "./components/Modal";
 
@@ -14,7 +14,7 @@ export default function Home() {
     const doneTasks = !!tasks.length ? tasks.filter(({completed}) => completed) : [];
 
     const handleAddTask = (title, isHighPrio) => {
-        setTasks(currTasks => [{title, isHighPrio, completed: false, id: new Date().getTime()}, ...currTasks]);
+        setTasks(currTasks => [{title, isHighPrio, completed: false, id: new Date().getTime()}, ...currTasks].sort((a,b) =>  (b.isHighPrio-a.isHighPrio)));
     }
 
     const handleTaskClick = (taskIndex, statusToApply) => {
