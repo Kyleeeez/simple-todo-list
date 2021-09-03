@@ -1,2 +1,2 @@
-# prima-test
-Test di Francesco Palomba per Prima Assicurazioni.
+# todo-list
+A simple todo-list made by Francesco Palomba

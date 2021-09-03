@@ -1,6 +1,6 @@
 import {TaskCard} from "./components/TaskCard";
 import {NewTaskContainer} from "./components/new-task/NewTaskContainer";
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {Menu} from "./components/Menu";
 import {Modal} from "./components/Modal";
 
